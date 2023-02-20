@@ -139,15 +139,19 @@
 - Known and solved issues are collected under this topic to inform readers. Please check all titles if you face an error in alpha-trainer-tf.
 #### 1) Can not download data from DVC with GitPython
 - If you activate the conda environment with this code:
+
     ```shell
     # Activating conda environment
     source /home/user_name_smartalpha_ai/miniconda3/bin/activate alpha_trainer_tf2
     ```
+
 You will get a GitPython download error due to not being able to access the specified repository on code. There are two ways to solve this problem. Firstly, you should run the following command if you want to keep activating the conda enviorenment by running activate file such as above.
+
     ```shell
     # Download p11 kit
     conda install -c conda-forge p11-kit
     ```
+
 Secondly, you can activate the conda environement by running the following command below with no issue. In this case, you do not have to download p11 kit.
     ```shell
     # Download p11 kit
@@ -155,11 +159,13 @@ Secondly, you can activate the conda environement by running the following comma
     ```
 #### 2) ImportError: cannot import name 'builder' from 'google.protobuf.internal'
 - If you get such error, please follow these steps:
+
 1. Install the latest protobuf version 
     ```shell
     pip install --upgrade protobuf
     ```
 2. Copy builder.py from .../Lib/site-packages/google/protobuf/internal to another folder on your computer 
+
 3. Install a protobuf version that is compatible with your project
     ```shell
     pip install protobuf==3.19.4
